@@ -1,0 +1,33 @@
+# Dépendances
+/node_modules
+
+# Build
+/dist
+/build
+
+# Tests et couverture
+/coverage
+/.nyc_output
+
+# Logs
+*.log
+npm-debug.log*
+yarn-error.log*
+
+# Secrets et environnement  (cf. §9.1 du cahier des charges)
+.env
+.env.*
+!.env.example
+*.pem
+*-service-account*.json
+firebase-adminsdk*.json
+
+# IDE et OS
+/.idea
+/.vscode/*
+!/.vscode/extensions.json
+.DS_Store
+
+# Divers
+/.nest
+*.tsbuildinfo
