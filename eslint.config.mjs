@@ -25,7 +25,11 @@ export default tseslint.config(
       parserOptions: {
         // Fait découvrir le tsconfig.json automatiquement, y compris pour les
         // fichiers de test qui dépendent d'un autre tsconfig.
-        projectService: true,
+        // `allowDefaultProject` couvre les fichiers de configuration de la
+        // racine, qui ne font partie d'aucun tsconfig mais doivent être lintés.
+        projectService: {
+          allowDefaultProject: ['*.js', '*.mjs', '*.cjs'],
+        },
         tsconfigRootDir: import.meta.dirname,
       },
     },
